@@ -10,8 +10,8 @@ const launches = await getLatestLaunches();
     launches.map((launch) => (
       <CardLaunch
         id={launch.id}
-        img={launch.links.patch.small}
-        details={launch.details}
+        img={launch.image}
+        details={launch.content}
         flightNumber={launch.flight_number}
         success={launch.success}
       />

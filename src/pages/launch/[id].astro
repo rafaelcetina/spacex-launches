@@ -21,14 +21,14 @@ export async function getStaticPaths() {
   <article class="flex gap-y-4 flex-col text-center">
     <img
       class="w-52 h-auto m-auto"
-      src={launch?.links.patch.small}
+      src={launch?.image}
       alt={`Lanzamiento ${launch?.id}`}
     />
     <h2 class="text-4xl text-white font-bold">
       Launch #{launch?.flight_number}
     </h2>
     <p class="text-lg">
-      {launch?.details}
+      {launch?.content}
     </p>
     {launch?.id}
   </article>

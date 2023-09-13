@@ -12,6 +12,21 @@ export interface APISpaceXResponse {
   nextPage: number
 }
 
+export interface SpaceXApiResponse {
+  success: boolean
+  data: Launch[]
+}
+
+export interface Launch {
+  id: string
+  created_at: Date
+  flight_number: number
+  success: boolean
+  content: string
+  image: string
+  date_unix: number
+}
+
 export interface Doc {
   fairings: Fairings | null
   links: Links
