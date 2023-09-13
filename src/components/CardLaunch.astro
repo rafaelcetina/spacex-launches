@@ -16,12 +16,13 @@ const launchStatus = success ? "Success" : "Failure";
   href={`/launch/${id}`}
   class="rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:scale-105 hover:bg-gray-700 hover:border-gray-500 transition flex flex-col"
 >
-  <picture class="flex justify-center p-4">
+  <picture class="flex justify-center p-4" transition:name={`launch-${id}`}>
     <img class="mb-5 rounded-lg" src={img} alt={`Patch for launch ${id}`} />
   </picture>
 
   <header class="p-4 flex-grow">
     <span
+      transition:name={`launch-status-${id}`}
       class:list={[
         "text-xs font-semibold mr-2 px-2.5 py-0.5 rounded",
         {
