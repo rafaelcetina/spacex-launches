@@ -11,8 +11,8 @@ import HeaderButton from "./HeaderButton.astro";
     <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">
       All the information about SpaceX launches in one place.
     </p>
-    <div transition:persist>
-      <Counter class="mt-8" client:visible />
+    <div transition:name="counter" transition:persist>
+      <Counter client:visible class="mt-8" />
     </div>
   </div>
   <nav
