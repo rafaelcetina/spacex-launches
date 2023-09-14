@@ -1,9 +1,10 @@
-import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
+import { defineConfig } from 'astro/config'
+import tailwind from '@astrojs/tailwind'
+import compress from 'astro-compress'
 
-import vue from "@astrojs/vue";
+import vue from '@astrojs/vue'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), vue()]
-});
+  integrations: [tailwind(), vue(), compress()]
+})

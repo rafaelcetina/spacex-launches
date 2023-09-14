@@ -35,7 +35,7 @@ export async function getStaticPaths() {
           "text-xs font-semibold mx-2 px-2.5 py-0.5 rounded",
           {
             "bg-green-300 text-green-900": launch.success,
-            "bg-red-400 text-white": !launch.success,
+            "bg-red-400 text-black": !launch.success,
           },
         ]}>{launch.success ? "Success" : "Failure"}</span
       >
