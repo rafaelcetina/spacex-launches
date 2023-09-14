@@ -1,4 +1,4 @@
-import { type Doc, type SpaceXApiResponse } from '../types/api'
+import { type Doc, type SpaceXApiResponse, type Launch } from '../types/api'
 
 const BASE_URL = import.meta.env.PUBLIC_BASE_URL
 

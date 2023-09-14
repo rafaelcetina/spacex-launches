@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getLatestLaunches, getLaunchBy } from "../../services/spacex";
-
+import { Image } from "astro:assets";
 const { id } = Astro.params;
 let launch;
 
@@ -19,7 +19,9 @@ export async function getStaticPaths() {
 
 <Layout title={`Lanzamiento ${id}`}>
   <article class="flex gap-y-4 flex-col text-center">
-    <img
+    <Image
+      width="300"
+      height="300"
       style={`view-transition-name: launch-${launch.id}`}
       class="w-52 h-auto m-auto"
       src={launch?.image}
@@ -32,8 +34,8 @@ export async function getStaticPaths() {
         class:list={[
           "text-xs font-semibold mx-2 px-2.5 py-0.5 rounded",
           {
-            "bg-green-400 text-green-900": launch.success,
-            "bg-red-400 text-red-900": !launch.success,
+            "bg-green-300 text-green-900": launch.success,
+            "bg-red-400 text-white": !launch.success,
           },
         ]}>{launch.success ? "Success" : "Failure"}</span
       >

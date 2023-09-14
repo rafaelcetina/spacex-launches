@@ -7,6 +7,8 @@ interface Props {
   details: string | null;
 }
 
+import { Image } from "astro:assets";
+
 const { success, flightNumber, details, id, img } = Astro.props;
 
 const launchStatus = success ? "Success" : "Failure";
@@ -17,7 +19,13 @@ const launchStatus = success ? "Success" : "Failure";
   class="rounded-lg border shadow-md bg-gray-800 border-gray-700 hover:scale-105 hover:bg-gray-700 hover:border-gray-500 transition flex flex-col"
 >
   <picture class="flex justify-center p-4" transition:name={`launch-${id}`}>
-    <img class="mb-5 rounded-lg" src={img} alt={`Patch for launch ${id}`} />
+    <Image
+      width="180"
+      height="180"
+      class="mb-5 rounded-lg"
+      src={img}
+      alt={`Patch for launch ${id}`}
+    />
   </picture>
 
   <header class="p-4 flex-grow">
@@ -26,8 +34,8 @@ const launchStatus = success ? "Success" : "Failure";
       class:list={[
         "text-xs font-semibold mr-2 px-2.5 py-0.5 rounded",
         {
-          "bg-green-400 text-green-900": success,
-          "bg-red-400 text-red-900": !success,
+          "bg-green-300 text-green-900": success,
+          "bg-red-400 text-white": !success,
         },
       ]}>{launchStatus}</span
     >
