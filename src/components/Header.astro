@@ -1,5 +1,5 @@
 ---
-import Counter from "./Counter.vue";
+import CounterSvelte from "./CounterSvelte.svelte";
 import HeaderButton from "./HeaderButton.astro";
 ---
 
@@ -17,7 +17,7 @@ import HeaderButton from "./HeaderButton.astro";
     transition:name="counter-vue"
     transition:persist
   >
-    <Counter client:visible />
+    <CounterSvelte client:visible />
   </section>
   <nav
     class="flex flex-col items-center justify-between w-full text-center md:flex-row"
